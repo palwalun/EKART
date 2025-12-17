@@ -22,7 +22,11 @@ pipeline{
              dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
        }
-  
+     stage('Building Image'){
+	  steps{
+	    sh 'docker build -t ekart:latest .'
+	  }
+	 }
   
   
   }
