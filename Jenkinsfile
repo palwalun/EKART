@@ -1,5 +1,8 @@
 pipeline{
  agent any
+   options{
+    skipDefaultCheckout(true)
+    }
   stages{
    stage('Checkout'){
      steps{
@@ -16,7 +19,7 @@ pipeline{
      stage('OWASP Dependency-Check') {
       steps {
          dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'Dependency-Check'
-            
+             dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
        }
   
