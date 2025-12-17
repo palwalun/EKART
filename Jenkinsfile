@@ -15,14 +15,9 @@ pipeline{
      }
      stage('OWASP Dependency-Check') {
       steps {
-         dependencyCheck additionalArguments: '--scan ./ -f XML,HTML', 
-                         odcInstallation: 'Dependency-Check'
-            }
-     post {
-        always {
+         dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'Dependency-Check'
             dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
-          }
-         }
+            }
        }
   
   
