@@ -76,7 +76,7 @@ pipeline{
             }
            }
           }
-        stages('deploying to k83'){
+        stage('deploying to k83'){
 		     steps{
 		       sh 
            ''''
