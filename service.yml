@@ -8,6 +8,6 @@ spec:
  type: LoadBalancer
  selector:
   app: ekart
-  ports:
+ ports:
    - port: 80
      targetPort: 8080
