@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.17_10-jre-alpine-3.21
+FROM openjdk:8-jdk-alpine
 WORKDIR /app
 COPY target/*.jar app.jar
 EXPOSE 8080
