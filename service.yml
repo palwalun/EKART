@@ -10,4 +10,4 @@ spec:
   app: ekart
  ports:
    - port: 80
-     targetPort: 8080
+     targetPort: 8070
