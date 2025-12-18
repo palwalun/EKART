@@ -73,11 +73,17 @@ pipeline{
            -e acr_password=$ACR_PASS \
            -b
         '''
+            }
+           }
           }
-        }
-     }
-  
-  
-  }
- 
- }
+        stages('deploying to k83'){
+		     steps{
+		       sh 
+           ''''
+		           kubectl apply -f deploymentservice.yml
+		           kubectl apply -f service.yml
+		         '''
+             }
+		       }	
+          }
+}
