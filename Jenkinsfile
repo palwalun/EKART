@@ -79,7 +79,7 @@ pipeline{
         stage('deploying to k83'){
 		     steps{
 		       sh 
-           ''''
+           '''
 		           kubectl apply -f deploymentservice.yml
 		           kubectl apply -f service.yml
 		         '''
