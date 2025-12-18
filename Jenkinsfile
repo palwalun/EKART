@@ -76,7 +76,7 @@ pipeline{
             }
            }
           }
-        stage('deploying to k83'){
+        stage('deploying to k8s'){
 		     steps{
 		       sh '''
 		           kubectl apply -f deploymentservice.yml
